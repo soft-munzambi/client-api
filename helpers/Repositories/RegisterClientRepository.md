@@ -90,3 +90,27 @@ public interface RegisterClientRepository
 # Heraça 
 
 Herança é um princípio de programação orientada a objetos em que uma classe (subclasse) pode herdar atributos e métodos de outra classe (superclasse). Isso promove a reutilização de código, permitindo que classes compartilhem características comuns e estendam ou modifiquem o comportamento herdado conforme necessário. A subclasse pode acessar e usar os membros herdados da superclasse, além de adicionar novos membros específicos. Este conceito facilita a criação de hierarquias de classes, promovendo a organização e a manutenção do código.
+
+# Exemplo de Query no JPA
+
+```java
+@Query("SELECT t FROM RegisterClient t " +
+                        "WHERE (t.createdAt BETWEEN :startDate AND :endDate) "
+                        + "AND (COALESCE(:name, '') = '' OR t.name LIKE CONCAT(:name, '%')) "
+                        + "AND (COALESCE(:uuidList, '') = '' OR t.uuid IN :uuidList) AND t.deletedAt IS NULL")
+// Metodo com paramentros
+List<RegisterClient> allWithParamAnDateBETWEEN(
+                        @Param("name") String name,
+                        @Param("uuidList") List<String> uuidList,
+                        @Param("startDate") Instant startDate,
+                        @Param("endDate") Instant endDate);
+
+        boolean existsByNif(String nif);
+```
+
+```java
+@Query("SELECT t FROM RegisterClient t WHERE t.deletedAt IS NULL")
+List<RegisterClient> all();
+```
+
+# Doc - 002 Munzambi
