@@ -25,7 +25,7 @@ public class TypeClientDTO implements Serializable {
     @NotBlank(message = "o campo designação é de caracter obrigatorio,"
             + " é importante descrever a caracteristica do tipo de cliente.")
 
-    private String designation;
+    private String name;
 
     private String details;
 

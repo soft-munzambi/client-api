@@ -18,7 +18,7 @@ public class CountryTDO {
     @Hidden
     private String uuid;
     @NotBlank
-    private String designation;
+    private String name;
     private String acronym;
     private String currency;
     private String details;

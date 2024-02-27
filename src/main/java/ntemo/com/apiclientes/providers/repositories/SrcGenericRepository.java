@@ -7,7 +7,7 @@ import ntemo.com.apiclientes.models.TypeClient;
 
 public interface SrcGenericRepository<T> {
 
-    List<TypeClient> allWithParamAnDateBETWEEN(String designation, List<String> uuid, Instant start, Instant end);
+    List<TypeClient> allWithParamAnDateBETWEEN(String name, List<String> uuid, Instant start, Instant end);
 
     // void setInstantUpdated(T attr);
 

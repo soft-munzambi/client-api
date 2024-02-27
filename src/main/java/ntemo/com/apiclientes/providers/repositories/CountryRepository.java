@@ -20,11 +20,11 @@ public interface CountryRepository extends CrudRepository<Country, String>, SrcG
     @Query("SELECT t FROM Country t "
             // + "LEFT JOIN t.registerClients ON t.registerClients.typeClient = t.uuid"
             + "WHERE (t.createdAt BETWEEN :startDate AND :endDate) "
-            + "AND (COALESCE(:designation, '') = '' OR t.designation LIKE CONCAT(:designation, '%')) "
+            + "AND (COALESCE(:name, '') = '' OR t.name LIKE CONCAT(:name, '%')) "
             + "AND (COALESCE(:uuidList, '') = '' OR t.uuid IN :uuidList) AND t.deletedAt IS NULL")
 
     List<Country> allWithParamAnDateBETWEEN(
-            @Param("designation") String designation, @Param("uuidList") List<String> uuidList,
+            @Param("name") String name, @Param("uuidList") List<String> uuidList,
             @Param("startDate") Instant startDate, @Param("endDate") Instant endDate);
 
 }

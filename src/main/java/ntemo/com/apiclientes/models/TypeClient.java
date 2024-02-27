@@ -27,8 +27,8 @@ public class TypeClient implements Serializable {
     @Column(name = "uuid", columnDefinition = "VARCHAR(250)")
     private String uuid;
 
-    @Column(name = "designation", columnDefinition = "VARCHAR(250)", nullable = false)
-    private String designation;
+    @Column(name = "name", columnDefinition = "VARCHAR(250)", nullable = false)
+    private String name;
 
     @Column(name = "details", columnDefinition = "TEXT")
     private String details;

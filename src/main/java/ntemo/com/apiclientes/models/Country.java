@@ -26,8 +26,8 @@ public class Country {
     @GeneratedValue(strategy = GenerationType.UUID)
     private String uuid;
 
-    @Column(name = "designation", columnDefinition = "VARCHAR(250)")
-    private String designation;
+    @Column(name = "name", columnDefinition = "VARCHAR(250)")
+    private String name;
 
     @Column(name = "acronym", columnDefinition = "VARCHAR(250)")
     private String acronym;
