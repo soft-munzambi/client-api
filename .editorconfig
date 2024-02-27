@@ -1,0 +1,2 @@
+[*.{java,xml}]
+insert_final_newline = true
