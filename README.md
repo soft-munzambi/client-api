@@ -8,5 +8,6 @@ Sou Munzambi Ntemo Miguel e estou contribuindo para o crescimento da comunidade.
 
 **Informaçao dos modelos**
 
-* [ ] Tudo sobre colunas e Relacionamento no projecto.
-  [Relacionamento Um para muitos](https://github.com/soft-munzambi/client-api/blob/main/helpers/models/RelacionamentoEColunas.md)
+* [ ] Introdução a modelos no contexto do projecto! [clica aqui](https://github.com/soft-munzambi/client-api/blob/main/helpers/models/Introducao.md)
+* [ ] Tudo sobre colunas e Relacionamento no projecto! [clica aqui](https://github.com/soft-munzambi/client-api/blob/main/helpers/models/RelacionamentoEColunas.md)
+* [ ] Resumo da Class RegisterClient! [clica aqui](https://github.com/soft-munzambi/client-api/blob/main/helpers/models/RegisterClient.md)
