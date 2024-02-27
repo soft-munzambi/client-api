@@ -20,9 +20,9 @@ public class HomeController {
 
     public String index(Model model) {
 
-        // String name = "2003";
-        // model.addAttribute("name", name);
-        // model.addAttribute("typeClient", this.typeClientService.all());
+        String name = "Munzambi Miguel";
+        model.addAttribute("name", name);
+
         return "index";
     }
 }

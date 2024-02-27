@@ -11,7 +11,6 @@ import jakarta.persistence.GenerationType;
 import java.io.Serializable;
 import jakarta.persistence.Id;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

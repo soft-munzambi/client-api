@@ -22,7 +22,6 @@ public class RegisterClientDTO implements Serializable {
 
     @Hidden
     private String uuid;
-
     @NotBlank(message = "O campo nome do cliente é obrigatorio, portanto,"
             + " é importante designar o cliente.")
     private String name;
