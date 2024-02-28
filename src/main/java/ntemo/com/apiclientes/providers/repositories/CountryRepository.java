@@ -12,7 +12,8 @@ import ntemo.com.apiclientes.models.Country;
 import ntemo.com.apiclientes.models.RegisterContact;
 
 @Repository
-public interface CountryRepository extends CrudRepository<Country, String>, SrcGenericRepository<CountryRepository> {
+public interface CountryRepository
+        extends CrudRepository<Country, String>, SrcGenericRepository<Country, CountryRepository> {
 
     @Query("SELECT t FROM Country t WHERE t.uuid = :uuid AND t.deletedAt IS NULL")
     Country one(@Param("uuid") String uuid);

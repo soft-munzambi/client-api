@@ -9,11 +9,10 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import ntemo.com.apiclientes.models.RegisterContact;
-import ntemo.com.apiclientes.models.TypeClient;
 
 @Repository
 public interface ContactRepository
-        extends CrudRepository<RegisterContact, String>, SrcGenericRepository<ContactRepository> {
+        extends CrudRepository<RegisterContact, String>, SrcGenericRepository<RegisterContact, ContactRepository> {
 
     @Query("SELECT t FROM RegisterContact t WHERE t.uuid = :uuid AND t.deletedAt IS NULL")
     RegisterContact one(@Param("uuid") String uuid);

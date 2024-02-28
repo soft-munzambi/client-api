@@ -7,12 +7,12 @@ import java.util.List;
 
 import ntemo.com.apiclientes.providers.repositories.SrcGenericRepository;
 
-public abstract class GenericServices<T, R extends SrcGenericRepository<R>> {
+public abstract class GenericServices<T, R extends SrcGenericRepository<T, R>> {
 
     protected abstract R getInstance();
 
     @SuppressWarnings("unchecked")
-    public List<T> allWithParm(String designation, List<String> uuid,
+    public List<T> allWithParm(String name, List<String> uuid,
             List<String> rangeData) {
 
         Calendar calendar = Calendar.getInstance();
@@ -34,7 +34,7 @@ public abstract class GenericServices<T, R extends SrcGenericRepository<R>> {
         }
 
         // funciona devidamente porque vem da interface pai;
-        return (List<T>) this.getInstance().allWithParamAnDateBETWEEN(designation, uuid, start, end);
+        return (List<T>) this.getInstance().allWithParamAnDateBETWEEN(name, uuid, start, end);
 
     }
 

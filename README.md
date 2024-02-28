@@ -14,4 +14,9 @@ Sou Munzambi Ntemo Miguel e estou contribuindo para o crescimento da comunidade.
 
 **Repositorios**
 
-* [ ] Toda informação necessaria sobro o repositorio! [clica aqui](https://github.com/soft-munzambi/client-api/blob/main/helpers/Repositories/RegisterClientRepository.md)
+* [ ] Toda informação necessaria sobro o repositorio! [clica aqu](https://github.com/soft-munzambi/client-api/blob/main/helpers/Repositories/RegisterClientRepository.md)
+
+# RUM
+
+* sudo ./mvnw clean package (Linux Ubuntu 22.0.4)
+* docker compose up -d

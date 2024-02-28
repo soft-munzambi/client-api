@@ -12,7 +12,8 @@ import ntemo.com.apiclientes.models.RegisterClient;
 
 @Repository
 public interface RegisterClientRepository
-                extends CrudRepository<RegisterClient, String>, SrcGenericRepository<RegisterClientRepository> {
+                extends CrudRepository<RegisterClient, String>,
+                SrcGenericRepository<RegisterClient, RegisterClientRepository> {
 
         @Query("SELECT t FROM RegisterClient t WHERE t.deletedAt IS NULL")
         List<RegisterClient> all();

@@ -7,11 +7,13 @@ import org.springframework.stereotype.Repository;
 
 import java.time.Instant;
 import java.util.List;
+
+import ntemo.com.apiclientes.models.Country;
 import ntemo.com.apiclientes.models.TypeClient;
 
 @Repository
 public interface TypeClientRepository
-                extends CrudRepository<TypeClient, String>, SrcGenericRepository<TypeClientRepository> {
+                extends CrudRepository<TypeClient, String>, SrcGenericRepository<TypeClient, TypeClientRepository> {
 
         @Query("SELECT t FROM TypeClient t WHERE t.deletedAt IS NULL")
         List<TypeClient> all();
